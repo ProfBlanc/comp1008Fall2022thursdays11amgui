@@ -5,6 +5,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class Utlities {
 /*
 Create a new fxml file named
@@ -15,7 +17,7 @@ use the Utilities method of openPage
 to open the regristration page
  */
 
-    static void openPage(String fileName, String title) throws Exception{
+    static void openPage(String fileName, String title) throws Exception {
 
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(fileName + "-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());

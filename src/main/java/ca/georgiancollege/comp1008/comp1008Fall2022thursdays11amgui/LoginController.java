@@ -7,6 +7,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
+
 public class LoginController {
 
     //accessibility_level data_type name;
@@ -21,8 +23,9 @@ public class LoginController {
     @FXML
     private PasswordField textPassword;
 
-    @FXML
-    void onLoginClick(ActionEvent event) {
+    LoginModel model = new LoginModel();
+
+    void oldonLoginClick(ActionEvent event) {
 
         System.out.println("Login Clicked");
 
@@ -50,12 +53,12 @@ public class LoginController {
                     "You may enter").show();
 
             try {
-                Utlities.openPage("register",
-                        "Registration Page");
+                Utlities.openPage("welcome",
+                        "Welcome Page");
             }
             catch (Exception e){
                 errorMsg.setText("Could not load " +
-                        "registration page");
+                        "welcome page");
             }
 
         }
@@ -74,9 +77,49 @@ public class LoginController {
     }
 
     @FXML
+    void Stage2onLoginClick(ActionEvent event) throws Exception{
+
+        model.process(
+                textUsername.getText(), textPassword.getText()
+        );
+
+        if(model.validate()){
+            Utlities.openPage("welcome", "Welcome");
+        }
+        else{
+            errorMsg.setText("Incorrect Username and/or Password");
+        }
+    }
+
+    @FXML
+    void onLoginClick(ActionEvent event){
+
+        try {
+            model.process(
+                    textUsername.getText(), textPassword.getText()
+            );
+            Utlities.openPage("welcome1", "Welcome!");
+        }
+        catch (Exception e){
+            errorMsg.setText(e.getMessage());
+
+        }
+
+
+}
+
+
+    @FXML
     void onRegisterClick(ActionEvent event) {
 
         System.out.println("Register Clicked");
+        try {
+            Utlities.openPage("register", "Register");
+        }
+        catch (Exception e){
+            errorMsg.setText("Could not load Registration Page");
+        }
+
     }
 
     @FXML
