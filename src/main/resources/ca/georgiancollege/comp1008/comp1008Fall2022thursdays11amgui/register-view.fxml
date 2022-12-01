@@ -1,13 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="463.0" prefWidth="600.0" style="-fx-background-color: lightblue; -fx-border-color: darkblue; -fx-border-style: solid;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.georgiancollege.comp1008.comp1008Fall2022thursdays11amgui.RegisterController">
+    <children>
+        <Label alignment="CENTER" prefHeight="40.0" prefWidth="200.0" text="Registration" textFill="DARKBLUE">
+            <font>
+                <Font size="25.0" />
+            </font>
+            <VBox.margin>
+                <Insets left="200.0" right="200.0" top="20.0" />
+            </VBox.margin>
+        </Label>
+        <Label alignment="CENTER" prefHeight="40.0" prefWidth="100.0" text="Go!" textFill="DARKBLUE">
+            <font>
+                <Font size="25.0" />
+            </font>
+            <VBox.margin>
+                <Insets bottom="20.0" left="250.0" right="250.0" top="10.0" />
+            </VBox.margin>
+        </Label>
+        <Label fx:id="errorMsg" alignment="CENTER" prefHeight="30.0" prefWidth="400.0" text="Error Message goes here" textFill="RED">
+            <font>
+                <Font size="20.0" />
+            </font>
+            <VBox.margin>
+                <Insets left="100.0" right="100.0" />
+            </VBox.margin>
+        </Label>
+        <TextField fx:id="registrationUsername" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="300.0" promptText="Enter Username">
+            <VBox.margin>
+                <Insets left="150.0" right="150.0" />
+            </VBox.margin>
+        </TextField>
+        <PasswordField fx:id="registrationPassword" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="300.0" promptText="Enter Password">
+            <VBox.margin>
+                <Insets left="150.0" right="150.0" top="20.0" />
+            </VBox.margin>
+        </PasswordField>
+      <PasswordField fx:id="confirmPassword" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="300.0" promptText="Confirm Password">
+         <VBox.margin>
+            <Insets left="150.0" right="150.0" top="20.0" />
+         </VBox.margin>
+      </PasswordField>
+        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onRegister" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #3549bc;" text="Register" textFill="WHITE">
+            <VBox.margin>
+                <Insets bottom="20.0" left="250.0" right="250.0" top="20.0" />
+            </VBox.margin>
+        </Button>
+        <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onClear" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #3549bc;" text="Clear" textFill="WHITE">
+            <VBox.margin>
+                <Insets left="250.0" right="250.0" />
+            </VBox.margin>
+        </Button>
+    </children>
+</VBox>
