@@ -6,18 +6,33 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="background" prefHeight="521.0" prefWidth="682.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.georgiancollege.comp1008.comp1008Fall2022thursdays11amgui.WelcomeController">
    <children>
-      <Label layoutX="191.0" layoutY="57.0" text="Welcome Everyone!">
+      <Label layoutX="238.0" layoutY="57.0" text="Welcome Everyone!">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <ImageView fitHeight="175.0" fitWidth="369.0" layoutX="115.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="175.0" fitWidth="369.0" layoutX="156.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/Georgian-Barrie-campus-circle-Fall-2014.jpg" />
          </image>
       </ImageView>
+      <ImageView fx:id="imageWorldCup" fitHeight="150.0" fitWidth="200.0" layoutX="7.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/worldcup.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageBorderPane" fitHeight="150.0" fitWidth="200.0" layoutX="247.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/borderpane.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageUltimate" fitHeight="150.0" fitWidth="200.0" layoutX="464.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/ultimatetest.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="message" alignment="CENTER" layoutX="152.0" layoutY="450.0" prefHeight="48.0" prefWidth="376.0" style="-fx-border-color: blue; -fx-border-width: 3px;" text="Message Goes Here" />
    </children>
 </AnchorPane>
