@@ -11,6 +11,7 @@ import java.nio.file.Path;
 
 public class WelcomeController {
 
+
     @FXML
     private AnchorPane background;
 
@@ -24,8 +25,17 @@ public class WelcomeController {
     private ImageView imageUltimate;
 
     @FXML
-    private Label message;
+    private Label message, welcome;
 
+    private String username;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     EventHandler<MouseEvent> onImageClick = new EventHandler<MouseEvent>() {
         @Override
@@ -57,6 +67,13 @@ public class WelcomeController {
         }
     };
 
+    EventHandler<MouseEvent> onMouseMove = new EventHandler<MouseEvent>() {
+        @Override
+        public void handle(MouseEvent event) {
+            message.setText( (int)event.getSceneX() + "," + (int)event.getSceneY());
+        }
+    };
+
     @FXML
     void initialize(){
         message.setText("");
@@ -64,6 +81,12 @@ public class WelcomeController {
         imageWorldCup.setOnMouseClicked(onImageClick);
         imageBorderPane.setOnMouseClicked(onImageClick);
         imageUltimate.setOnMouseClicked(onImageClick);
+
+        background.setOnMouseMoved(onMouseMove);
+
+        welcome.setText("Welcome "+ getUsername());
+
+
 
     }
 

@@ -28,6 +28,22 @@ to open the regristration page
 
 
     }
+    static void openWelcomePage(String usernname) throws Exception {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("welcome-view.fxml"));
+
+        WelcomeController controller = new WelcomeController();
+        controller.setUsername(usernname);
+        fxmlLoader.setController(controller);
+
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setTitle("Welcome");
+        stage.setScene(scene);
+        stage.show();
+
+
+    }
     static Alert createAlert(Alert.AlertType alertType,
                              String title,
                              String message

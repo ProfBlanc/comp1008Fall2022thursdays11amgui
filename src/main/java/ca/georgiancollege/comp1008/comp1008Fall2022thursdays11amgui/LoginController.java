@@ -98,7 +98,8 @@ public class LoginController {
             model.process(
                     textUsername.getText(), textPassword.getText()
             );
-            Utlities.openPage("welcome", "Welcome!");
+            //Utlities.openPage("welcome", "Welcome!");
+            Utlities.openWelcomePage(textUsername.getText());
         }
         catch (Exception e){
             errorMsg.setText(e.getMessage());

@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="background" prefHeight="521.0" prefWidth="682.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.georgiancollege.comp1008.comp1008Fall2022thursdays11amgui.WelcomeController">
+<AnchorPane fx:id="background" prefHeight="521.0" prefWidth="682.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="238.0" layoutY="57.0" text="Welcome Everyone!">
+      <Label fx:id="welcome" layoutX="238.0" layoutY="57.0" text="Welcome Everyone!">
          <font>
             <Font size="25.0" />
          </font>
